@@ -1,20 +1,22 @@
-const KEY = "/api/kv/pg-partyquest:progress";
+const KEY = "pg-partyquest:progress";
 
-export async function loadProgress(fetcher = fetch) {
+export async function loadProgress() {
+  await window.PG.ready;
   try {
-    const res = await fetcher(KEY);
-    if (!res.ok) return {};
-    const text = await res.text();
-    if (!text) return {};
-    return JSON.parse(text);
+    const raw = await window.PG.kv.get(KEY);
+    if (!raw) return {};
+    return JSON.parse(raw);
   } catch {
     return {};
   }
 }
 
-export async function saveProgress(data, fetcher = fetch) {
+export async function saveProgress(data) {
+  await window.PG.ready;
   try {
-    await fetcher(KEY, { method: "PUT", body: JSON.stringify(data) });
-  } catch {}
-  return data;
+    await window.PG.kv.put(KEY, JSON.stringify(data));
+    return { ok: true };
+  } catch (error) {
+    return { ok: false, error };
+  }
 }
