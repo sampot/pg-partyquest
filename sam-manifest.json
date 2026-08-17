@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "rev": "0d1b33f",
+  "files": [
+    "app.js",
+    "assets/bgm/bgm.ogg",
+    "assets/licenses/art-license.txt",
+    "assets/licenses/blippy-bits.txt",
+    "assets/licenses/kenney-impact.txt",
+    "assets/licenses/kenney-interface.txt",
+    "assets/licenses/kenney-rpg.txt",
+    "assets/licenses/kenney-toon.txt",
+    "assets/licenses/music-license.txt",
+    "assets/licenses/sfx-license.txt",
+    "assets/sfx/click.ogg",
+    "assets/sfx/coin.ogg",
+    "assets/sfx/door.ogg",
+    "assets/sfx/heal.ogg",
+    "assets/sfx/hit.ogg",
+    "assets/sfx/spell.ogg",
+    "assets/sfx/step.ogg",
+    "assets/sfx/sword.ogg",
+    "assets/sfx/win.ogg",
+    "audio.js",
+    "game.js",
+    "index.html",
+    "persist.js",
+    "styles.css"
+  ]
+}
